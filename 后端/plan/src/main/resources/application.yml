@@ -1,0 +1,7 @@
+spring:
+  datasource:
+      url: jdbc:mysql://119.3.48.53:3306/plan?allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: QDSG_hz.2018
+server:
+  port: 80

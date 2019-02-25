@@ -1,0 +1,12 @@
+.frame{
+	padding: 10px;
+	padding-top: 50px;
+}
+.alert alert-warning {
+	padding: 10px;
+	padding-top: 50px;
+}
+.mytitle{
+	padding-left: 120px;
+	box-sizing: border-box;;
+}
