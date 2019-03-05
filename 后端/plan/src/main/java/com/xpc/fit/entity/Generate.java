@@ -3,7 +3,10 @@ package com.xpc.fit.entity;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * 生成计划的一些细节
@@ -12,6 +15,7 @@ import javax.persistence.Id;
 @Entity
 public class Generate {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     /**
      * 性别 女:0  男:1
@@ -44,9 +48,9 @@ public class Generate {
     /**
      * 生成计划的日期
      */
-    private String date;
+    private Date date = new Date();
     /**
-     * 用户从发起请求至生成完计划 操作的总耗时
+     * 用户从发起请求至生成完计划 操作的总耗时 单位:ms
      */
     private String costTime;
 }

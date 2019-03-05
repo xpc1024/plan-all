@@ -4,4 +4,4 @@ spring:
       username: root
       password: QDSG_hz.2018
 server:
-  port: 80
+  port: 8888

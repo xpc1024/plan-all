@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  * 收集个人信息
@@ -21,11 +22,9 @@ public class PersonController {
 
     @RequestMapping("/collect")
     public Result collect(Person person, HttpServletResponse response) {
-        System.out.println("hhh");
-        if (person != null) {
-            personService.save(person);
-        }
         response.addHeader("Access-Control-Allow-Origin", "*");
-        return new SuccessResult(person);
+        Map<String, Integer> map;
+        map = personService.save(person);
+        return new SuccessResult(map);
     }
 }

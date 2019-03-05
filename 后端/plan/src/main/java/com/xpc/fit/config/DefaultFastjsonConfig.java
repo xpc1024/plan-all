@@ -26,7 +26,6 @@ import java.util.List;
 @ConditionalOnMissingBean(FastJsonHttpMessageConverter.class)
 @ConditionalOnWebApplication
 public class DefaultFastjsonConfig {
-
     @Bean
     public FastJsonHttpMessageConverter fastJsonHttpMessageConverter() {
         FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
@@ -76,5 +75,4 @@ public class DefaultFastjsonConfig {
         mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
         return mediaTypes;
     }
-
 }

@@ -6,6 +6,8 @@ import com.xpc.fit.service.PersonService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 收集个人信息
@@ -15,7 +17,10 @@ public class PersonServiceImpl implements PersonService {
     @Resource
     private PersonRespository personRespository;
     @Override
-    public void save(Person person) {
+    public Map<String,Integer> save(Person person) {
         personRespository.save(person);
+        Map<String,Integer> map = new HashMap<>();
+        map.put("id",person.getId());
+        return map;
     }
 }

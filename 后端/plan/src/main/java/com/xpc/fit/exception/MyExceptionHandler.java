@@ -27,7 +27,7 @@ public class MyExceptionHandler {
      * 拦截运行时的未知异常
      */
     @ExceptionHandler(RuntimeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public ErrorResult myException(RuntimeException e){
         logger.error("未知的系统异常:",e);
