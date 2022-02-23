@@ -1,0 +1,113 @@
+/*pc端基础页面适配*/
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5bc0de;
+}
+body{
+    height: 100%;
+}
+.alert{
+    margin: 20px auto 50px;
+}
+.conBox{
+    margin-top: 60px;
+}
+.main {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+#step {
+    margin-bottom: 60px;
+}
+
+.btns {
+    width: 142px;
+    margin: 50px auto 60px auto;
+}
+
+.info {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #928787;
+}
+
+.info span {
+    color: red;
+}
+.bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+  
+}
+.copyright{
+    margin: 50px auto 0px;
+    width: 280px;
+}
+
+/*手机端适配*/
+@media screen and (max-width: 960px){
+  /*手机端基础样式适配*/
+  *{
+    margin:0;
+    padding:0
+  }
+  body{
+    height: 100%;
+    width: device-width;
+    margin: auto; auto;
+  }
+  .text-center{
+    margin: 10% auto;
+  }
+  .conBox{
+    margin: 0px auto;
+  }
+  .bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+    margin: 0px auto;
+  }
+  .main {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .items{
+    width: 100%;
+    margin: 0px;
+  }
+  .form-horizontal{
+    width: 100%;
+  }
+  #step{
+    width: 100%;
+    margin: 0px auto;
+  }
+  .alert{
+    margin: 10% auto;
+  }
+  .btns{
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+  }
+  .copyright{
+    width: 100%;
+    margin: 5% auto 0%;
+    text-align: center;
+  }
+}

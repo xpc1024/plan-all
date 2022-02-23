@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0
+}
+/*PC端基础页面适配*/
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #81D842;
+}
+body{
+    height: 100%;
+}
+.alert{
+    margin: 20px auto 50px;
+}
+.conBox{
+    margin-top: 60px;
+}
+.main {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+#step {
+    margin-bottom: 60px;
+}
+
+.btns {
+text-align: center;
+}
+
+.items{
+    margin: 30px auto 30px;
+    margin-left: 250px;
+    width: 800px;
+}
+
+.info {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #928787;
+}
+
+.info span {
+    color: red;
+}
+
+.bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+}
+.copyright{
+  text-align: center;
+    margin: 20px auto 0px;
+}
+
+/*pc端滑块组件适配*/
+#slider {
+  margin: 50px auto;
+  width: 320px;
+  height: 40px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #dae2d0;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  display: none;
+}
+
+#slider_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #7AC23C;
+  z-index: 1;
+}
+
+#label {
+  width: 46px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #cccccc;
+  background: #fff;
+  z-index: 3;
+  cursor: move;
+  color: #ff9e77;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 20px;
+}
+
+#labelTip {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-family: 'Microsoft Yahei', serif;
+  color: #787878;
+  line-height: 38px;
+  text-align: center;
+  z-index: 2;
+}
+
+/*pc生成进度条适配*/
+/*pc端进度条适配*/
+#loadingContainer {
+  box-sizing: border-box;
+  width: 350px;
+  height: 40px;
+  display: block;
+  margin: 50px auto;
+  display: none;
+  /*border: solid 2px #D5D6E2;*/
+}
+#loadingContainer * {
+  box-sizing: border-box;
+}
+#loadingContainer .loadingbar {
+  position: relative;
+  width: calc(100% - 20px);
+  height: 40px;
+  background-color: #E9C448;
+  border-radius: 999999px;
+  margin: 40px 10px;
+  padding: 4px 37px 4px 4px;
+}
+#loadingContainer .loadingbar .filler_wrapper {
+  border-radius: 999999px;
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+}
+#loadingContainer .loadingbar .filler_wrapper .filler {
+  transition: ease-out width 0.9s;
+  -webkit-transition: ease-out width 0.9s;
+  background-color: darkorange;
+  text-align: center;
+  width: 0;
+  height: 100%;
+}
+#loadingContainer .loadingbar .filler_wrapper .filler .value {
+  color: white;
+  text-shadow: 1px 1px 3px #FF913C;
+  font-size: 17px;
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+#loadingContainer .loadingbar .leaf {
+  transition: linear all 2.5s;
+  -webkit-transition: linear all 2.5s;
+  width: 20px;
+  height: 25px;
+  background: url("https://y01.imgup.net/leafe61e.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 5%;
+  top: 5px;
+  z-index: 5;
+}
+#loadingContainer .loadingbar .marker_container {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: solid 2px white;
+  position: absolute;
+  background-color: #FF913C;
+  right: 0;
+  top: -10px;
+  transition: all 2s ease-out;
+  z-index: 10;
+}
+#loadingContainer .loadingbar .marker_container:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 10px;
+}
+#loadingContainer .loadingbar .marker_container:after {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: white;
+  display: inline-block;
+  position: absolute;
+  left: calc(50% - 2px);
+  top: calc(50% - 2px);
+}
+#loadingContainer .loadingbar .marker_container .marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100% 100% 100% 0;
+  background-color: white;
+}
+#loadingContainer .loadingbar .marker_container .marker:nth-child(1) {
+  left: 18px;
+  top: 1px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#loadingContainer .loadingbar .marker_container .marker:nth-child(2) {
+  left: 1px;
+  top: 18px;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+#loadingContainer .loadingbar .marker_container .marker:nth-child(3) {
+  left: 18px;
+  bottom: 1px;
+  -moz-transform: rotate(-225deg);
+  -ms-transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+#loadingContainer .loadingbar .marker_container .marker:nth-child(4) {
+  right: 1px;
+  top: 18px;
+  -moz-transform: rotate(-315deg);
+  -ms-transform: rotate(-315deg);
+  -webkit-transform: rotate(-315deg);
+  transform: rotate(-315deg);
+}
+
+@keyframes wowrotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes wind {
+  0% {
+    top: 2px;
+  }
+  50% {
+    top: 12px;
+  }
+  100% {
+    top: 30px;
+    right: 100%;
+  }
+}
+@keyframes wind-up {
+  0% {
+    top: 1px;
+  }
+  60% {
+    top: 20px;
+  }
+  100% {
+    top: 7px;
+    right: 100%;
+  }
+}
+.rotateIt {
+  animation: wowrotate 3s infinite ease-in-out;
+}
+
+/**[Demo]* */
+#plus_ten {
+  margin: auto;
+  display: block;
+}
+
+/*body {
+  background: orange;
+}*/
+
+
+/*手机端适配*/
+@media screen and (max-width: 960px){
+  /*手机端基础样式适配*/
+  *{
+    margin:0;
+    padding:0
+  }
+  body{
+    height: 100%;
+    width: device-width;
+    margin: auto; auto;
+  }
+  .conBox{
+    margin: 0px auto;
+    position: relative;
+  }
+  .bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+    position: relative;
+    margin: 0px auto;
+  }
+  .text-center{
+    margin: 10% auto;
+  }
+  .main {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .alert{
+    margin: 10% auto;
+  }
+  .items{
+    width: 100%;
+    margin: 0px;
+  }
+  .form-horizontal{
+    width: 100%;
+  }
+  #step{
+    width: 100%;
+    margin: 0px auto;
+  }
+  .btns{
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+  }
+  .copyright{
+    width: 100%;
+    margin: 5% auto 0%;
+    text-align: center;
+  }
+  /*手机端滑块适配*/
+  #slider{
+    width: 100%;
+    margin: 10% auto;
+  }
+  /*手机端加载进度条适配*/
+  #loadingContainer{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+}
+
+

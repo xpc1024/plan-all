@@ -1,0 +1,124 @@
+/*pc端基础页面适配*/
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #81D842;
+}
+
+body{
+    height: 100%;
+}
+.alert{
+    margin: 20px auto 50px;
+}
+.conBox{
+    margin-top: 60px;
+}
+.main {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+#step {
+    margin-bottom: 60px;
+}
+.pictures{
+  overflow: hidden;
+}
+.caption{
+  text-align: center;
+}
+
+.btns {
+    width: 142px;
+    margin: 30px auto ;
+}
+
+.info span {
+    color: red;
+}
+.bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+  
+}
+#readme-pdf{
+    height: 265px;
+    display: none;
+}
+#training-pdf{
+    height: 265px;
+    display: none;
+}
+#diet-pdf{
+    height: 265px;
+    display: none;
+}
+#work-pdf{
+    height: 265px;
+    display: none;
+}
+.copyright{
+    margin: 50px auto 0px;
+    width: 280px;
+}
+
+/*手机端适配*/
+@media screen and (max-width: 960px){
+  /*手机端基础样式适配*/
+  *{
+    margin:0;
+    padding:0
+  }
+  body{
+    height: 100%;
+    width: device-width;
+    margin: auto; auto;
+  }
+    .conBox{
+    margin: 0px auto;
+    position: relative;
+  }
+  .bc{
+    background:rgba(255,255,255,0.5);
+    border:3px solid #faebcc;
+    color: #8a6d3b;
+    position: relative;
+    margin: 0px auto;
+  }
+  .main {
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .form-horizontal{
+    width: 100%;
+  }
+  .pictures{
+    margin:10% auto ;
+    overflow: hidden;
+  }
+  #step{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .btns{
+    width: 100%;
+    text-align: center;
+  }
+  .copyright{
+    width: 100%;
+    margin: 5% auto 0%;
+    text-align: center;
+  }
+}
+
